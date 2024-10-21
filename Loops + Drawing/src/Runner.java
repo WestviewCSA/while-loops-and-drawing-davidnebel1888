@@ -45,8 +45,42 @@ public class Runner extends JPanel{
 		 * }
 		 */
 		
-		 
+		// 10, 10, 
+		int var = 0;
+		while(var <= 100) {
+			int x1 = (int) (Math.random() * (765/2 - 10 + 1) ) + 10;
+			int y1 = (int) (Math.random() * (550/2-10 - 10 + 1) ) + 10;
+			int x2 = (int) (Math.random() * (765/2 - 10 + 1) ) + 10;
+			int y2 = (int) (Math.random() * (550/2-10 - 10 + 1) ) + 10;
 
+			g2.drawLine(x1, y1, x2, y2);
+			var++;
+		}
+		
+		int var2 = 0;
+		while(var2 <= 100) {
+			int x1 = (int) (Math.random() * (765/4 - 10 + 1) ) + 10;
+			int y1 = (int) (Math.random() * (550/2-10 - 270 + 1) ) + 270;
+			int x2 = (int) (Math.random() * (765/4 - 10 + 1) ) + 10;
+			int y2 = (int) (Math.random() * (550/2-10 - 270 + 1) ) + 270;
+			
+			g2.drawOval(x1, y1, x2, y2);
+			var2++;
+		}
+		int var3 = 0;
+		
+		//(int)(Math.random()*(max-min+1))+min
+		
+		
+		while(var3 <= 100) {
+			int x1 = (int) (Math.random() * (765 - 270 + 1) ) + 270;
+			int y1 = (int) (Math.random() * (550/2-10 - 10 + 1) ) + 10;
+			int x2 = (int) (Math.random() * (765 - 270 + 1) ) + 270;
+			int y2 = (int) (Math.random() * (550/2-10 - 10 + 1) ) + 10;
+			
+			g2.drawRect(x1, y1, x2, y2);
+			var3++;
+		}
 	
 	
 	}
