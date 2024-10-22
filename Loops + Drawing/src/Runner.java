@@ -47,38 +47,63 @@ public class Runner extends JPanel{
 		
 		// 10, 10, 
 		int var = 0;
-		while(var <= 100) {
-			int x1 = (int) (Math.random() * (765/2 - 10 + 1) ) + 10;
-			int y1 = (int) (Math.random() * (550/2-10 - 10 + 1) ) + 10;
-			int x2 = (int) (Math.random() * (765/2 - 10 + 1) ) + 10;
-			int y2 = (int) (Math.random() * (550/2-10 - 10 + 1) ) + 10;
-
+		while(var < 100) {
+			int x1 = (int) (Math.random() * (765/2-10 - 15 + 1) ) + 15;
+			int y1 = (int) (Math.random() * (550/2-10 - 15 + 1) ) + 15;
+			int x2 = (int) (Math.random() * (765/2-10 - 15 + 1) ) + 15;
+			int y2 = (int) (Math.random() * (550/2-10 - 15 + 1) ) + 15;
+			
+			int red = (int) (Math.random() * (255 + 1) );		
+			int green = (int) (Math.random() * (255 + 1) );
+			int blue = (int) (Math.random() * (255 + 1) );
+			
+			g.setColor( new Color(red, green, blue));
 			g2.drawLine(x1, y1, x2, y2);
 			var++;
 		}
 		
 		int var2 = 0;
-		while(var2 <= 100) {
-			int x1 = (int) (Math.random() * (765/4 - 10 + 1) ) + 10;
-			int y1 = (int) (Math.random() * (550/2-10 - 270 + 1) ) + 270;
-			int x2 = (int) (Math.random() * (765/4 - 10 + 1) ) + 10;
-			int y2 = (int) (Math.random() * (550/2-10 - 270 + 1) ) + 270;
+		while(var2 < 100) {
+			int x1 = (int) (Math.random() * (755/2-10 - 15 + 1) ) + 15;
+			int y1 = (int) (Math.random() * (510 - 275 + 1) ) + 275;
+			int d = (int) (Math.random() * (200 - 5 + 1) );
+
+			// Find out how close x1 is to the right edge.
+			int distanceX = (765-10)/2 - x1;
+			// Find out how close y1 is to the bottom edge.
+			int distanceY = 540 - y1;
 			
-			g2.drawOval(x1, y1, x2, y2);
+			// Make sure circle diameter is not larger than distance to edge.
+			if (d >= distanceX) {
+				d = distanceX - 5;
+			}
+			if (d >= distanceY) {
+				d = distanceY - 5;
+			}
+		
+			int red = (int) (Math.random() * (255 + 1) );
+			int green = (int) (Math.random() * (255 + 1) );
+			int blue = (int) (Math.random() * (255 + 1) );
+			
+			g.setColor( new Color(red, green, blue));
+			g2.drawOval(x1, y1, d, d);
 			var2++;
 		}
-		int var3 = 0;
 		
 		//(int)(Math.random()*(max-min+1))+min
 		
-		
-		while(var3 <= 100) {
-			int x1 = (int) (Math.random() * (765 - 270 + 1) ) + 270;
-			int y1 = (int) (Math.random() * (550/2-10 - 10 + 1) ) + 10;
-			int x2 = (int) (Math.random() * (765 - 270 + 1) ) + 270;
-			int y2 = (int) (Math.random() * (550/2-10 - 10 + 1) ) + 10;
+		int var3 = 0;
+		while(var3 < 100) {
+			int x1 = (int) (Math.random() * (765-60 - 765/2+5 + 1) ) + 765/2+5;
+			int y1 = (int) (Math.random() * (550/2-60 - 15 + 1) ) + 15;
 			
-			g2.drawRect(x1, y1, x2, y2);
+			int red = (int) (Math.random() * (255 + 1) );
+			int green = (int) (Math.random() * (255 + 1) );
+			int blue = (int) (Math.random() * (255 + 1) );
+			
+			g.setColor( new Color(red, green, blue));
+			g2.fillRect(x1, y1, 50, 50);
+
 			var3++;
 		}
 	
