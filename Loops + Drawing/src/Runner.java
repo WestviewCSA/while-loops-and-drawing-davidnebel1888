@@ -45,7 +45,7 @@ public class Runner extends JPanel{
 		 * }
 		 */
 		
-		// 10, 10, 
+		// 10, 10,
 		int var = 0;
 		while(var < 100) {
 			int x1 = (int) (Math.random() * (765/2-10 - 15 + 1) ) + 15;
